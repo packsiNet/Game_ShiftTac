@@ -16,7 +16,9 @@
       "Bash(python3 -c \"from PIL import Image, ImageDraw; print\\('PIL available'\\)\")",
       "Bash(python3 -c \"import struct, zlib; print\\('Built-in only'\\)\")",
       "Bash(mkdir -p /home/shahram/.claude/projects/-run-media-shahram-New-Volume-Projects-Games-shift-tac/memory && echo \"Created\")",
-      "Bash(JAVA_HOME=/home/shahram/Downloads/android-studio/jbr ANDROID_HOME=/home/shahram/Android/Sdk ./gradlew assembleDebug --no-daemon)"
+      "Bash(JAVA_HOME=/home/shahram/Downloads/android-studio/jbr ANDROID_HOME=/home/shahram/Android/Sdk ./gradlew assembleDebug --no-daemon)",
+      "Bash(JAVA_HOME=/home/shahram/Downloads/android-studio/jbr ANDROID_HOME=/home/shahram/Android/Sdk ./gradlew assembleDebug --no-daemon --stacktrace)",
+      "Bash(xxd)"
     ],
     "additionalDirectories": [
       "/home/shahram/.claude/projects/-run-media-shahram-New-Volume-Projects-Games-shift-tac"

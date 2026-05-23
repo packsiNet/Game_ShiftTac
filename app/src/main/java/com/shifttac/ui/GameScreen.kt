@@ -22,6 +22,7 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.drawscope.Stroke
+import android.app.Activity
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.platform.LocalContext
@@ -679,7 +680,9 @@ fun GameScreen(viewModel: GameViewModel, onExit: () -> Unit) {
     val displayState = if (isAITurn && gameState == GameState.WAITING_FOR_SHIFT) GameState.AI_THINKING else gameState
 
     val context = LocalContext.current
+    val activity = context as? Activity
     val soundManager = remember { SoundManager(context) }
+    val adManager = remember { AdManager(context) }
     var feedbackMode by remember { mutableStateOf(soundManager.mode) }
 
     // Sound/vibration on piece placement — read the board to know who placed
@@ -745,7 +748,17 @@ fun GameScreen(viewModel: GameViewModel, onExit: () -> Unit) {
             Spacer(Modifier.height(8.dp))
         }
         if (gameState == GameState.GAME_OVER && winInfo != null) {
-            WinOverlay(winner = winInfo.winner, winData = winInfo, board = board, mode = mode, onReplay = { viewModel.reset() }, onMenu = onExit)
+            WinOverlay(
+                winner = winInfo.winner, winData = winInfo, board = board, mode = mode,
+                onReplay = {
+                    if (activity != null) adManager.showIfReady(activity) { viewModel.reset() }
+                    else viewModel.reset()
+                },
+                onMenu = {
+                    if (activity != null) adManager.showIfReady(activity) { onExit() }
+                    else onExit()
+                }
+            )
         }
     }
 }

@@ -1,7 +1,25 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
+
+// Read AdMob IDs from local.properties (gitignored — safe for secrets)
+val localProps = Properties().also { props ->
+    rootProject.file("local.properties")
+        .takeIf { it.exists() }
+        ?.inputStream()
+        ?.use { props.load(it) }
+}
+val admobAppId: String = localProps.getProperty(
+    "ADMOB_APP_ID",
+    "ca-app-pub-3940256099942544~3347511713"  // Google test App ID
+)
+val admobInterstitialId: String = localProps.getProperty(
+    "ADMOB_INTERSTITIAL_ID",
+    "ca-app-pub-3940256099942544/1033173712"  // Google test interstitial ID
+)
 
 android {
     namespace = "com.shifttac"
@@ -13,6 +31,12 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+
+        // Inject App ID into AndroidManifest.xml
+        manifestPlaceholders["admobAppId"] = admobAppId
+
+        // Inject ad unit ID into generated BuildConfig class
+        buildConfigField("String", "ADMOB_INTERSTITIAL_ID", "\"$admobInterstitialId\"")
     }
 
     buildTypes {
@@ -33,6 +57,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -55,6 +80,9 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.animation:animation")
     implementation("androidx.compose.foundation:foundation")
+
+    // AdMob — interstitial ads between games
+    implementation("com.google.android.gms:play-services-ads:23.3.0")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
