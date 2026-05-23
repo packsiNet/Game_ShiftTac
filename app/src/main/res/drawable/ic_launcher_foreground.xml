@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 3×3 mini grid cells -->
+    <!-- Row 0 -->
+    <path android:fillColor="#19243A" android:pathData="M20,14 Q23,14 23,17 L23,30 Q23,33 20,33 L7,33 Q4,33 4,30 L4,17 Q4,14 7,14 Z"/>
+    <path android:fillColor="#19243A" android:pathData="M47,14 Q50,14 50,17 L50,30 Q50,33 47,33 L34,33 Q31,33 31,30 L31,17 Q31,14 34,14 Z"/>
+    <path android:fillColor="#19243A" android:pathData="M74,14 Q77,14 77,17 L77,30 Q77,33 74,33 L61,33 Q58,33 58,30 L58,17 Q58,14 61,14 Z"/>
+    <!-- Row 1 -->
+    <path android:fillColor="#19243A" android:pathData="M20,38 Q23,38 23,41 L23,54 Q23,57 20,57 L7,57 Q4,57 4,54 L4,41 Q4,38 7,38 Z"/>
+    <path android:fillColor="#19243A" android:pathData="M47,38 Q50,38 50,41 L50,54 Q50,57 47,57 L34,57 Q31,57 31,54 L31,41 Q31,38 34,38 Z"/>
+    <path android:fillColor="#19243A" android:pathData="M74,38 Q77,38 77,41 L77,54 Q77,57 74,57 L61,57 Q58,57 58,54 L58,41 Q58,38 61,38 Z"/>
+    <!-- Row 2 -->
+    <path android:fillColor="#19243A" android:pathData="M20,62 Q23,62 23,65 L23,78 Q23,81 20,81 L7,81 Q4,81 4,78 L4,65 Q4,62 7,62 Z"/>
+    <path android:fillColor="#19243A" android:pathData="M47,62 Q50,62 50,65 L50,78 Q50,81 47,81 L34,81 Q31,81 31,78 L31,65 Q31,62 34,62 Z"/>
+    <path android:fillColor="#19243A" android:pathData="M74,62 Q77,62 77,65 L77,78 Q77,81 74,81 L61,81 Q58,81 58,78 L58,65 Q58,62 61,62 Z"/>
+
+    <!-- X glyph in center-left (row1,col0) coral -->
+    <path android:strokeColor="#E8703A" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M8,42 L19,53"/>
+    <path android:strokeColor="#E8703A" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M19,42 L8,53"/>
+
+    <!-- X glyph in row1,col2 coral -->
+    <path android:strokeColor="#E8703A" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M62,42 L73,53"/>
+    <path android:strokeColor="#E8703A" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M73,42 L62,53"/>
+
+    <!-- O glyph in row0,col1 cyan -->
+    <path android:strokeColor="#5AAED8" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M40.5,23.5 A6,6 0 1 0 40.5,23.4"/>
+
+    <!-- X glyph in row2,col1 coral -->
+    <path android:strokeColor="#E8703A" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M35,66 L46,77"/>
+    <path android:strokeColor="#E8703A" android:strokeWidth="3.5" android:strokeLineCap="round" android:fillColor="@android:color/transparent"
+        android:pathData="M46,66 L35,77"/>
+
+    <!-- Shift arrow (yellow) at the bottom -->
+    <path android:strokeColor="#D8C840" android:strokeWidth="3" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M10,91 L68,91"/>
+    <path android:strokeColor="#D8C840" android:strokeWidth="3" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M58,85 L68,91 L58,97"/>
+
+    <!-- Small dot accent top-right (coral glow) -->
+    <path android:fillColor="#E8703A" android:pathData="M84,18 A4,4 0 1 0 84,17.9"/>
+
+</vector>

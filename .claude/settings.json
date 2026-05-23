@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tar -tf /tmp/shifttac_extracted)",
+      "Bash(tar -xf /tmp/shifttac_extracted -C /tmp/)",
+      "Bash(export JAVA_HOME=\"/home/shahram/Downloads/android-studio/jbr\")",
+      "Bash([ -d \"$SRC/mipmap-hdpi\" ])",
+      "Bash(cp __TRACKED_VAR__/mipmap-hdpi/ic_launcher.png '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/mipmap-hdpi/')",
+      "Bash(cp __TRACKED_VAR__/mipmap-mdpi/ic_launcher.png '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/mipmap-mdpi/')",
+      "Bash(cp __TRACKED_VAR__/mipmap-xhdpi/ic_launcher.png '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/mipmap-xhdpi/')",
+      "Bash(cp __TRACKED_VAR__/mipmap-xxhdpi/ic_launcher.png '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/mipmap-xxhdpi/')",
+      "Bash(cp '/run/media/shahram/New Volume/Projects/Games/flat_rubik/android/app/src/main/res/drawable/ic_launcher_background.xml' '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/drawable/')",
+      "Bash(cp '/run/media/shahram/New Volume/Projects/Games/flat_rubik/android/app/src/main/res/drawable/ic_launcher_foreground.xml' '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/drawable/')",
+      "Bash(cp '/run/media/shahram/New Volume/Projects/Games/flat_rubik/android/app/src/main/res/__TRACKED_VAR__/ic_launcher.xml' '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/__TRACKED_VAR__/')",
+      "Bash(cp '/run/media/shahram/New Volume/Projects/Games/flat_rubik/android/app/src/main/res/__TRACKED_VAR__/ic_launcher_round.xml' '/run/media/shahram/New Volume/Projects/Games/shift_tac/app/src/main/res/__TRACKED_VAR__/')",
+      "Bash(python3 -c \"from PIL import Image, ImageDraw; print\\('PIL available'\\)\")",
+      "Bash(python3 -c \"import struct, zlib; print\\('Built-in only'\\)\")",
+      "Bash(mkdir -p /home/shahram/.claude/projects/-run-media-shahram-New-Volume-Projects-Games-shift-tac/memory && echo \"Created\")",
+      "Bash(JAVA_HOME=/home/shahram/Downloads/android-studio/jbr ANDROID_HOME=/home/shahram/Android/Sdk ./gradlew assembleDebug --no-daemon)"
+    ],
+    "additionalDirectories": [
+      "/home/shahram/.claude/projects/-run-media-shahram-New-Volume-Projects-Games-shift-tac"
+    ]
+  }
+}
